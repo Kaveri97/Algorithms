@@ -1,28 +1,27 @@
 import java.io.*;
 import java.util.*;
-
+//Bon Appetit
 public class Solution {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        int n,sumd = 0, sumo = 0, d;
+        int n,k,tot;
+        int bCh=0;
         Scanner scan = new Scanner(System.in);
         n = scan.nextInt();
-        int a;
-        for(int i=0; i<3;i++){
-            for(int j=0;j<3;j++){
-                a = scan.nextInt();
-                if(i==j){
-                    sumd += a;
-                }
-                if(i+j==(n-1)){
-                    sumo += a;
-                }
-            }
+        k = scan.nextInt();
+        int[] c = new int[n];
+        for(int i=0; i<n; i++){
+            c[i] =scan.nextInt();
+            if(i!=k)
+                bCh += c[i];   
         }
-        d = (sumd - sumo);
-        if (d<0)
-            d = d*-1;
-        System.out.println(d);
+        bCh = bCh/2;
+        tot = scan.nextInt();
+        if(tot == bCh){
+            System.out.println("Bon Appetit");
+        }
+        else
+           System.out.println(tot-bCh); 
     }
 }
