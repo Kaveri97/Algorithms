@@ -1,19 +1,21 @@
-import java.util.Scanner;
 
-public class Node
-{
-public int data;
-public Node next;
-/* Constructor */
-public Node()
-{
-next = null;
-data = 0;
-}
-/* Constructor */
-public Node(int d,Node n)
-{
-data = d;
-next = n;
-}
+public class Node {
+
+
+	public int data;
+	public Node left;
+	public Node right;
+	public Node()
+	{
+		left=null;
+		right=null;
+		data=0;
+	}
+	public Node(int d)
+	{
+		data=d;
+		left=null;
+		right=null;
+	}
+
 }
