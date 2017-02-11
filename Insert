@@ -1,0 +1,17 @@
+Node Insert(Node head,int data) {
+    Node n = new Node();
+    n.data = data; 
+    n.next = null;
+    if(head == null){
+        head = n;
+        return head; 
+    }
+
+    Node tmp = head;
+    while(tmp.next != null){
+        tmp = tmp.next;
+    }
+
+    tmp.next = n;
+    return head; 
+}
