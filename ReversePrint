@@ -1,0 +1,15 @@
+void ReversePrint(Node head) {
+  Stack s = new Stack();
+  Node temp = head;
+  while(temp!=null){
+    s.add(temp.data);
+    temp = temp.next;
+  }
+    Iterator iter = s.iterator();
+
+while (iter.hasNext()){
+    System.out.println((int)s.pop());
+    
+}
+
+}
