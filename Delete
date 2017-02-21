@@ -1,0 +1,20 @@
+Node Delete(Node head, int position) {
+  // Complete this method
+    int p = 0;
+    Node temp = head;
+    if(head.next==null && position==0)
+        ;
+    else if(position == 0){
+        head = temp.next;
+    }
+    else{
+        while(temp.next!=null){
+            if((p+1)==position)
+                temp.next=temp.next.next;
+            else
+                temp = temp.next;
+            p++;
+        }
+    }
+    return head;
+}
