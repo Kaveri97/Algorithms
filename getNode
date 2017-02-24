@@ -1,0 +1,17 @@
+int GetNode(Node head,int n) {
+    Node temp = head;
+    int c=0, p=1,value=0;
+    while(temp!=null){
+        c++;
+        temp = temp.next;
+    }
+    temp = head;
+    while(temp!=null){
+        if(p == (c-n)){
+            value = temp.data;
+        }
+        p++;
+        temp = temp.next;
+    }
+    return value;
+}
