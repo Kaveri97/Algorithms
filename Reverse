@@ -1,0 +1,20 @@
+Stack ReversePrint(Node head) {
+  Stack s = new Stack();
+  Node temp = head;
+  while(temp!=null){
+    s.add(temp.data);
+    temp = temp.next;
+  }
+ return s;
+}
+Node Reverse(Node head) {
+    Stack t = ReversePrint(head);
+    Iterator iter = t.iterator();
+    Node temp = head;
+
+    while (iter.hasNext()){
+        temp.data = (int)t.pop();
+        temp = temp.next;
+    }
+    return head;
+}
