@@ -1,0 +1,23 @@
+int CompareLists(Node headA, Node headB) {
+  Stack s = new Stack();
+  Node tempA = headA;
+  Stack t = new Stack();
+  Node tempB = headB;
+  while(tempA!=null){
+    s.add(tempA.data);
+    tempA = tempA.next;
+  }
+  while(tempB!=null){
+    t.add(tempB.data);
+    tempB = tempB.next;
+  }
+  if(t.size()!=s.size())
+     return 0;   
+    Iterator iter = s.iterator();
+
+while (iter.hasNext()){
+    if((int)s.pop()!=(int)t.pop())
+        return 0;
+}
+return 1;  
+}
