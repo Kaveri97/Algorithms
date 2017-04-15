@@ -1,0 +1,25 @@
+Stack<Integer> s = new Stack<Integer>() ;
+Queue<Integer> q = new LinkedList<Integer>();
+void top_view(Node root)
+{
+  Node temp = root;
+  while(temp.left!=null){
+      s.push(temp.left.data);
+      temp = temp.left;
+  }
+  temp = root;
+  while(temp.right!=null){
+      q.add(temp.right.data);
+      temp = temp.right;
+  }  
+    while (!s.empty()){
+        int a = s.pop();
+        System.out.print(a + " ");
+    }
+  System.out.print(root.data+" ");
+  Iterator<Integer> itr = q.iterator();
+    while (itr.hasNext()){
+        int b = itr.next();
+        System.out.print(b + " ");
+    }
+}
